@@ -5,6 +5,32 @@
   box-sizing: border-box;
 }
 
+/* Make the navigation bar smaller on small screens */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+      padding: 10px;  /* Reduce padding */
+  }
+
+  .nav-bar ul {
+      flex-direction: column; /* Stack links vertically */
+      text-align: center;
+  }
+
+  .nav-bar li {
+      padding: 5px 0; /* Reduce space between links */
+  }
+  .palm-tree {
+      width: 80px;  /* Adjust width for smaller screens */
+      height: auto;
+  }
+
+  .banner h1 {
+      font-size: 20px; /* Reduce title size */
+  }
+}
+
+
+
 .ponomar-regular {
   font-family: "Ponomar", system-ui;
   font-weight: 400;
