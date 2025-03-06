@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Service Company</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="banner">
+        <img src="images/leftpalm.jpeg" alt="Palm Tree Left" class="palm-tree">
+        <h1>Go Tree Service</h1>
+        <img src="images/rightpalm.jpeg" alt="Palm Tree Right" class="palm-tree">
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <div class="gallery-sections">
+        <div class="gallery-category">
+            <h3>🌳 Past & Future Work</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/WorkPhotos/PalmTrees.jpg" alt="Two Rows of Three Palms" onclick="openLightbox(this.src)">
+                    <p>Two rows of Three Palms</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/WorkPhotos/480720496_122110653674760536_5338677765322109720_n.jpg" alt="Two Rows of Three Palms" onclick="openLightbox(this.src)">
+                    <p>Two Rows of Three Palms</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/WorkPhotos/LogTables.jpg" alt="Log Tables" onclick="openLightbox(this.src)">
+                    <p>Repurposing cross sections of a tree</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/WorkPhotos/LogTables2.jpg" alt="Log Tables" onclick="openLightbox(this.src)">
+                    <p>Repurposing cross sections of a tree</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-category">
+            <h3>📝 Certifications & Licenses</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/certifications/ContractorLicense.jpg" alt="Contractor License" onclick="openLightbox(this.src)">
+                    <p>Contractor License</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/ArboristsandTreeWorkersCert..jpeg" alt="Arborists and Tree Workers Certification" onclick="openLightbox(this.src)">
+                    <p>Arborists and Tree Workers Certification</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/ArialRescue.jpeg" alt="Arial Rescue Training" onclick="openLightbox(this.src)">
+                    <p>Arial Rescue Workshop</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/CommonDiseases.jpeg" alt="Knowledge of Common Diseases" onclick="openLightbox(this.src)">
+                    <p>Knowledge of Common Diseases</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/ElectricalHazardsAwareness.jpeg" alt="Electrical Hazards Awareness" onclick="openLightbox(this.src)">
+                    <p>Electrical Hazards Awareness</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/TreeWorkerExam.jpeg" alt="Tree Worker Examination" onclick="openLightbox(this.src)">
+                    <p>Tree Worker Examination</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/certifications/InsectsandMitesCert.jpeg" alt="Insects and Mites Knowledge" onclick="openLightbox(this.src)">
+                    <p>Insects and Mites Knowledge</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Lightbox for Enlarged Images -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>📍 Address: 123 Tree Lane, Forestville, CA</p>
+            <p>📞 Phone: (123) 456-7890</p>
+            <p>✉ Email: contact@treeservice.com</p>
+            <p>🌐 Website: www.treeservice.com</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+
+        <div class="footer-license">
+            <p>🌲 Licensed & Insured | License #123456</p>
+            <p>&copy; 2025 Tree Service Company. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+
+</body>
+</html>
