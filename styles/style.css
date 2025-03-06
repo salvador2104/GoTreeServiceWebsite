@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 /* Default Navigation Bar Styles */
+/* Default Navigation Bar Styles */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -56,17 +57,12 @@
       color: white;
       padding: 10px;
   }
-  .palm-tree {
-    width: 80px;  /* Adjust width for smaller screens */
-    height: auto;
-}
 }
 
 /* 🔹 Show Menu When Active */
 .nav-active {
   display: flex !important;
 }
-
 
 .ponomar-regular {
   font-family: "Ponomar", system-ui;
@@ -96,48 +92,6 @@ body {
   width: 150px;
   padding: 0 20px;
   height: auto;
-}
-
-/* Navigation Bar */
-.nav-bar {
-  background-color: white;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  text-align: center;
-}
-
-.nav-bar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.nav-bar li {
-  padding: 0 15px;
-  position: relative;
-  font-family: "Ponomar", sans-serif;
-}
-
-/* Add dividers between links */
-.nav-bar li:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  right: -10px;
-  color: black;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 5px;
-  font-family: "Ponomar", sans-serif;
-}
-
-.nav-bar a:hover {
-  color: green;
 }
 
 /* Main Content Styling */
